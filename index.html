@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 5px;
+        }
+    </style>
+    </head>
+
+    <body>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Колонка 1</th>
+                    <th>Колонка 2</th>
+                    <th>Колонка 3</th>
+                    <th>Колонка 4</th>
+                    <th>Колонка 5</th>
+                    <th>Колонка 6</th>
+                    <th>Колонка 7</th>
+                    <th>Колонка 8</th>
+                    <th>Колонка 9</th>
+                    <th>Колонка 10</th>
+                </tr>
+            </thead>
+            <tbody id="table-body">
+            </tbody>
+        </table>
+
+        <script>
+            // Отримати посилання на тіло таблиці
+            var tableBody = document.getElementById("table-body");
+
+            // Заповніть таблицю числами від 1 до 100
+            var count = 1;
+            for (var i = 0; i < 10; i++) {
+                // Створіть новий рядок
+                var row = document.createElement("tr");
+
+                for (var j = 0; j < 10; j++) {
+                    // Створіть новий стовпець
+                    var col = document.createElement("td");
+                    // Додайте число до стовпця
+                    col.innerHTML = count++;
+                    // Додайте стовпець до рядка
+                    row.appendChild(col);
+                }
+
+                // Додайте рядок до тіла таблиці
+                tableBody.appendChild(row);
+            }
+        </script>
+
+    </body>
+
+</html>
+</body>
+
+</html>
